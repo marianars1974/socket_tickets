@@ -27,18 +27,21 @@ socket.on('disconnect', () => {
 
 socket.on('estadoActual', (resp) => {
     
+  /*  var audio = new Audio('audio/new-ticket.mp3');
+    audio.play();
+    */
     actualizaHtml(resp.ultimos4);
     //label.text(tktActual.actual);
     console.log(resp);
 
 });
 
-socket.on('estadoPublico', (ultimos4) => {
+/*socket.on('estadoPublico', (ultimos4) => {
     $('#lblTicket1').text('Ticket Nro' + ultimos4[0].numero);
     console.log(`tkt Actual ${JSON.stringify(tktActual)}`);
 
 });
-
+*/
 function actualizaHtml(ultimos4)
 {
     for (var i = 0; i < ultimos4.length; i++) {
